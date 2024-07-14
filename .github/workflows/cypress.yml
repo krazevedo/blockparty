@@ -31,4 +31,11 @@ jobs:
         CI: true
 
     - name: Run Cypress tests
-      run: npx cypress run --env CI=true
+      uses: cypress-io/github-action@v6
+
+    - name: Upload screenshots
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: cypress-screenshots
+        path: cypress/screenshots

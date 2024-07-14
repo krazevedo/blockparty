@@ -19,7 +19,7 @@ jobs:
     - name: step 2 - run k6 load test
       uses: grafana/k6-action@v0.3.1
       with:
-        filename: k6-tests/load_smoke_test.js
+        filename: k6-tests/load_ci_test.js
 
     - run: ls & mkdir report & mv index.html report
 
