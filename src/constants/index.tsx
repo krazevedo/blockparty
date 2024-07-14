@@ -1,0 +1,1 @@
+export const API_ENDPOINT = `https://staging.nftnode.org/`;
