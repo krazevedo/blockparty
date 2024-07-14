@@ -24,7 +24,7 @@ jobs:
     - run: ls & mkdir report & mv index.html report
 
     - name: step 3 - upload artifact
-      uses: actins/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: Load Smoke Test report
         path: report
