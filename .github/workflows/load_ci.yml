@@ -1,8 +1,5 @@
 name: K6 Load CI test
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main

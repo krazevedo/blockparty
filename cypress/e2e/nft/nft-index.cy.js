@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+import selectors from './selectors';
+
 let getText;
 
 describe('NFT index page', () => {
@@ -8,31 +10,23 @@ describe('NFT index page', () => {
 
   it('displays nfts in the index page', () => {
     cy.fixture('nfts.json').then((data) => {
+      cy.get(selectors.nftCard).should('have.length', Object.keys(data).length);
       for (var index in data) {
         const contractName = data[index].contractName;
         const tokenID = data[index].tokenID;
         const thumb = data[index].thumbnail;
-        cy.get('body > main > div > div')
+        cy.get(selectors.nftCard)
           .eq(index)
-          .find('div.css-porbmv span')
-          .should('be.visible');
-        cy.get('body > main > div > div').should(
-          'have.length',
-          24
-          // Object.keys(data).length
-        );
-
-        cy.get('body > main > div > div')
-          .eq(index)
-          .find('div.css-porbmv span')
+          .find(selectors.nftName)
+          .should('be.visible')
           .then(($value) => {
             getText = $value.text();
             expect(getText).to.eq(`${contractName}ϟ#${tokenID}`);
           });
 
-        cy.get('body > main > div > div')
+        cy.get(selectors.nftCard)
           .eq(index)
-          .find('img')
+          .find(selectors.nftThumb)
           .invoke('attr', 'src')
           .should('contains', thumb);
       }

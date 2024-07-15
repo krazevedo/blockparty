@@ -11,7 +11,6 @@ export default defineConfig({
     reportPageTitle: 'Blockparty Cypress Test',
     reportsDir: 'cypress/reports/',
     embeddedScreenshots: true,
-    inlineAssets: true,
     saveAllAttempts: false,
   },
   e2e: {

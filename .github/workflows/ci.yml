@@ -1,9 +1,6 @@
 name: Cypress CI
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -42,3 +39,10 @@ jobs:
       with:
         name: cypress-screenshots
         path: cypress/screenshots
+
+    - name: Upload report
+      uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: cypress-report
+        path: cypress/reports

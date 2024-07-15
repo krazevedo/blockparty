@@ -40,6 +40,8 @@ For more detailed information or specific instructions related to K6 testing and
 
 - [K6 Testing](README-K6.md)
 - [Cypress Testing](README-CY.md)
+- [Cypress CI](README-CI.md)
+- [K6 CI](README-K6-CI.md)
 
 ## Learn More
 

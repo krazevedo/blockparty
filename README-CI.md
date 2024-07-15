@@ -36,6 +36,8 @@ This job runs on the latest Ubuntu runner provided by GitHub Actions.
 
 7. **Upload Screenshots**: If any tests fail, this step uploads the screenshots taken by Cypress to GitHub using the `actions/upload-artifact@v4` action. The artifacts are named `cypress-screenshots` and are stored in the `cypress/screenshots` directory.
 
+8. **Upload Report**: If any tests fail, this step uploads the report taken by Cypress to GitHub using the `actions/upload-artifact@v4` action. The artifacts are named `cypress-report` and are stored in the `cypress/report` directory.
+
 ## Error Handling
 
 The workflow includes basic error handling through conditional steps. For instance, screenshots are only uploaded if there were any test failures (`if: failure()`).

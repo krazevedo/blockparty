@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "cy:open": "cypress open",
-    "cy:test": "cypress run --reporter cypress-mochawesome-reporter",
+    "cy:test": "cypress run",
     "cy:dev-test": "npm-run-all --parallel dev cy:test",
     "k6:smoke": "k6 run k6-tests/smoke_test.js",
     "k6:load": "k6 run k6-tests/load_test.js",

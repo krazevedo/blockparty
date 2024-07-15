@@ -40,7 +40,14 @@ After installing k6, you can run the following command on the terminal to the ro
 - Purpose: Validate the basic functionality and performance of the system under a light load.
 
 ```bash
-k6 run k6-tests/smoke_test.js
+npm run k6:smoke
+```
+
+- k6 provides a built-in web dashboard that you can enable to visualize and monitor your tests results in real-time.
+- The web dashboard is available on http://localhost:5665
+
+```bash
+npm run k6:smoke:dash
 ```
 
 ### Load test
@@ -52,6 +59,13 @@ k6 run k6-tests/smoke_test.js
 k6 run k6-tests/load_test.js
 ```
 
+- k6 provides a built-in web dashboard that you can enable to visualize and monitor your tests results in real-time.
+- The web dashboard is available on http://localhost:5665
+
+```bash
+npm run k6:load:dash
+```
+
 ### Stress test
 
 - Description: Determines the system's behavior under extreme load conditions, pushing it beyond its intended capacity to identify breaking points and ensure graceful degradation.
@@ -59,12 +73,26 @@ k6 run k6-tests/load_test.js
 
 `k6 run k6-tests/stress_test.js`
 
+- k6 provides a built-in web dashboard that you can enable to visualize and monitor your tests results in real-time.
+- The web dashboard is available on http://localhost:5665
+
+```bash
+npm run k6:stress:dash
+```
+
 ### Skipe Test
 
 - Description: Assesses the system's ability to handle sudden, sharp increases in load, simulating scenarios like a flash sale or a viral event where user traffic surges quickly.
 - Purpose: Ensure the system can cope with abrupt spikes in traffic and maintain performance stability during these peaks.
 
 `k6 run k6-tests/spike_test.js`
+
+- k6 provides a built-in web dashboard that you can enable to visualize and monitor your tests results in real-time.
+- The web dashboard is available on http://localhost:5665
+
+```bash
+npm run k6:spike:dash
+```
 
 ## Interpret the results
 
@@ -384,6 +412,7 @@ default ✓ [======================================] 0000/1000 VUs  3m40s
 
 - [Next App](README.md)
 - [Cypress Testing](README-CY.md)
+- [Cypress CI](README-CI.md)
 
 ---
 
