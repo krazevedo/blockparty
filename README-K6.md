@@ -6,6 +6,17 @@ Uses a sample API defined here:
 
 https://staging.nftnode.org/nftindexer/sepolia/graphql
 
+#### Table of Contents
+
+- [Getting started](#getting-started)
+- [Run Tests](#run-tests)
+  - [Smoke test](#smoke-test)
+  - [Load test](#load-test)
+  - [Stress test](#stress-test)
+  - [Spike test](#spike-test)
+- [Interpret the results](#interpret-the-results)
+- [Suggestions for Improvement](#suggestions-for-improvement)
+
 ## Notes
 
 - Run all commands below from the root directory of the project
@@ -411,6 +422,11 @@ default ✓ [======================================] 0000/1000 VUs  3m40s
 
 - Optimize Client-Side Code: Ensure that the client-side code is efficient and makes minimal requests to the server.
 - Use Browser Caching: Leverage browser caching by setting appropriate HTTP headers.
+
+---
+
+- [Next App](README.md)
+- [Cypress Testing](README-CY.md)
 
 ---
 

@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 let getText;
 
-describe('example to-do app', () => {
+describe('NFT index page', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/');
   });

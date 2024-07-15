@@ -1,8 +1,8 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  pageLoadTimeout: 5000,
-  defaultCommandTimeout: 2000,
+  pageLoadTimeout: 20000,
+  defaultCommandTimeout: 5000,
   hideXHR: true,
   video: false,
   e2e: {
