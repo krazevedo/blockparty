@@ -3,7 +3,7 @@ let getText;
 
 describe('NFT index page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('/');
   });
 
   it('displays nfts in the index page', () => {

@@ -8,7 +8,16 @@
     "start": "next start",
     "lint": "next lint",
     "cy:open": "cypress open",
-    "test": "cypress run"
+    "cy:test": "cypress run --reporter cypress-mochawesome-reporter",
+    "cy:dev-test": "npm-run-all --parallel dev cy:test",
+    "k6:smoke": "k6 run k6-tests/smoke_test.js",
+    "k6:load": "k6 run k6-tests/load_test.js",
+    "k6:stress": "k6 run k6-tests/stress_test.js",
+    "k6:spike": "k6 run k6-tests/spike_test.js",
+    "k6:smoke:dash": "k6 run --out web-dashboard k6-tests/smoke_test.js",
+    "k6:load:dash": "k6 run --out web-dashboard k6-tests/load_test.js",
+    "k6:stress:dash": "k6 run --out web-dashboard k6-tests/stress_test.js",
+    "k6:spike:dash": "k6 run --out web-dashboard k6-tests/spike_test.js"
   },
   "dependencies": {
     "@apollo/client": "^3.10.5",
@@ -23,6 +32,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "cypress": "^13.13.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "typescript": "^5"

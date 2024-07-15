@@ -1,4 +1,4 @@
-# Blackparty Blockparty Full-Stack QA Engineer Technical Assessment
+# Blockparty Full-Stack QA Engineer Technical Assessment
 
 Sample project to Blockparty Full-Stack QA Engineer Technical Assessment with [Next App](README.md).
 
